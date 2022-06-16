@@ -25,7 +25,7 @@ func SendMessage(msg string) {
 	params.SetFrom(fromPhone)
 	params.SetBody(msg)
 
-	response, err := client.ApiV2010.CreateMessage(&params)
+	response, err := client.Api.CreateMessage(&params)
 	if err != nil {
 		fmt.Printf("error creating and sending message: %s\n", err.Error())
 		return
